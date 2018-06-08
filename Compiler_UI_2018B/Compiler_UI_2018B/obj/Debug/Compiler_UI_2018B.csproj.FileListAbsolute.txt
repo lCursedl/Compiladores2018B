@@ -1,0 +1,11 @@
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_UI_2018B.exe.config
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_UI_2018B.exe
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_UI_2018B.pdb
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_Project_2018B.dll
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_Project_2018B.pdb
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.csprojResolveAssemblyReference.cache
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.Properties.Resources.resources
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.csproj.GenerateResource.Cache
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.exe
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.pdb
+c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.Form1.resources

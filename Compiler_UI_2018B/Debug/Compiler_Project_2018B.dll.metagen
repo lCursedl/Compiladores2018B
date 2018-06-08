@@ -1,0 +1,70 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Compiler_Project_2018B, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Compiler_Project_2018B.CErrorModule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddError(ERROR_PHASE, Int32, String, String): PrivateScope, Public, HideBySig
+    GetNumErrors(): PrivateScope, Public, HideBySig
+Struct Compiler_Project_2018B.CToken: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class Compiler_Project_2018B.Manager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Compile(String): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct Compiler_Project_2018B.ERROR_PHASE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Compiler_Project_2018B.ERROR_PHASE LEXICO = 0 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.ERROR_PHASE SINTACTICO = 1 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.ERROR_PHASE SEMANTICO = 2 : Public, Static, Literal, HasDefault
+Struct Compiler_Project_2018B.TOKEN_TYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Compiler_Project_2018B.TOKEN_TYPE UNDEFINED = 0 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE ID = 1 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE INT = 2 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE FLOAT = 3 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE STRING = 4 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE KEYWORD = 5 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE RELATIONAL_OP = 6 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE ARITHMETIC_OP = 7 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE LOGICAL_OP = 8 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE NEGATION_OP = 9 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE SEPARATOR = 10 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE ASSIGN = 11 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE DIMENSION = 12 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.TOKEN_TYPE GROUPING = 13 : Public, Static, Literal, HasDefault
+Struct Compiler_Project_2018B.LEX_STATE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Compiler_Project_2018B.LEX_STATE START = 0 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_ID = 1 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_INT = 2 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_FLOAT = 3 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_STRING = 4 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_LESS = 5 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_LESS_EQUAL = 6 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_MORE = 7 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_MORE_EQUAL = 8 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_EQUALS = 9 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_COMPARISON = 10 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_NOT = 11 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_DIFFERENT = 12 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_DIMENSION = 13 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_ARITMETHIC_OP = 14 : Public, Static, Literal, HasDefault
+    Compiler_Project_2018B.LEX_STATE PARSING_COMMENT = 15 : Public, Static, Literal, HasDefault

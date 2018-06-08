@@ -1,0 +1,14 @@
+﻿  Stdafx.cpp
+  AssemblyInfo.cpp
+  Compiler_Project_2018B.cpp
+  ErrorModule.cpp
+  GlobalNode.cpp
+  Lexico.cpp
+  LocalNode.cpp
+  TabSymbol.cpp
+  Token.cpp
+  Generating Code...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Debug\Compiler_Project_2018B.dll
+  Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Debug\Compiler_Project_2018B.pdb (Partial PDB)
