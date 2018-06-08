@@ -9,3 +9,14 @@ c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compile
 c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.exe
 c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.pdb
 c:\users\gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.Form1.resources
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_UI_2018B.exe.config
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_UI_2018B.exe
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_UI_2018B.pdb
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_Project_2018B.dll
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\bin\Debug\Compiler_Project_2018B.pdb
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.Form1.resources
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.Properties.Resources.resources
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.csproj.GenerateResource.Cache
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.exe
+C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Compiler_UI_2018B\obj\Debug\Compiler_UI_2018B.pdb

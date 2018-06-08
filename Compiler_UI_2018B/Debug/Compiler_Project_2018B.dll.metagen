@@ -14,6 +14,7 @@ Class Compiler_Project_2018B.CErrorModule: AutoLayout, AnsiClass, Class, Public,
   Methods:
     AddError(ERROR_PHASE, Int32, String, String): PrivateScope, Public, HideBySig
     GetNumErrors(): PrivateScope, Public, HideBySig
+    GetErrors(): PrivateScope, Public, HideBySig
 Struct Compiler_Project_2018B.CToken: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType
 Class Compiler_Project_2018B.Manager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

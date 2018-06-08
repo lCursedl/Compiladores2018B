@@ -46,7 +46,7 @@
             this.compileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(467, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(832, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +84,7 @@
             this.UserInput.Location = new System.Drawing.Point(12, 27);
             this.UserInput.Multiline = true;
             this.UserInput.Name = "UserInput";
-            this.UserInput.Size = new System.Drawing.Size(443, 258);
+            this.UserInput.Size = new System.Drawing.Size(808, 258);
             this.UserInput.TabIndex = 1;
             // 
             // ErrorSpace
@@ -92,16 +92,20 @@
             this.ErrorSpace.Location = new System.Drawing.Point(12, 291);
             this.ErrorSpace.Multiline = true;
             this.ErrorSpace.Name = "ErrorSpace";
-            this.ErrorSpace.Size = new System.Drawing.Size(218, 128);
+            this.ErrorSpace.ReadOnly = true;
+            this.ErrorSpace.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.ErrorSpace.Size = new System.Drawing.Size(377, 128);
             this.ErrorSpace.TabIndex = 2;
             this.ErrorSpace.TextChanged += new System.EventHandler(this.ErrorSpace_TextChanged);
             // 
             // Info
             // 
-            this.Info.Location = new System.Drawing.Point(236, 291);
+            this.Info.Location = new System.Drawing.Point(431, 291);
             this.Info.Multiline = true;
             this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(212, 125);
+            this.Info.ReadOnly = true;
+            this.Info.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.Info.Size = new System.Drawing.Size(389, 128);
             this.Info.TabIndex = 3;
             this.Info.TextChanged += new System.EventHandler(this.Info_TextChanged);
             // 
@@ -109,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 431);
+            this.ClientSize = new System.Drawing.Size(832, 438);
             this.Controls.Add(this.Info);
             this.Controls.Add(this.ErrorSpace);
             this.Controls.Add(this.UserInput);

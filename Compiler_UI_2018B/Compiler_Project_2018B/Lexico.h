@@ -41,5 +41,7 @@ namespace Compiler_Project_2018B
 		LEX_STATE m_State;
 		void ClearTokens();
 		int GetNumTokens();
+		std::vector<CToken*>GetTokens();
+		cli::array<String^>^GetToken();
 	};
 }

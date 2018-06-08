@@ -1,14 +1,7 @@
-﻿  Stdafx.cpp
-  AssemblyInfo.cpp
-  Compiler_Project_2018B.cpp
-  ErrorModule.cpp
-  GlobalNode.cpp
-  Lexico.cpp
-  LocalNode.cpp
-  TabSymbol.cpp
-  Token.cpp
-  Generating Code...
-  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+﻿  Lexico.cpp
+Lexico.cpp(32): warning C4101: 'E': unreferenced local variable
+Lexico.cpp(442): warning C4018: '<': signed/unsigned mismatch
+Lexico.cpp(447): warning C4018: '<': signed/unsigned mismatch
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Debug\Compiler_Project_2018B.dll
-  Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\documents\visual studio 2015\Projects\Compiler_UI_2018B\Debug\Compiler_Project_2018B.pdb (Partial PDB)
+  Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Debug\Compiler_Project_2018B.dll
+  Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Debug\Compiler_Project_2018B.pdb (Partial PDB)

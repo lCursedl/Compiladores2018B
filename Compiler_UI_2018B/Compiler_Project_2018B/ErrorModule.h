@@ -21,5 +21,6 @@ namespace Compiler_Project_2018B {
 		CErrorModule();
 		void AddError(ERROR_PHASE p, int LineNum, String ^ desc, String ^ line);
 		int GetNumErrors();
+		cli::array<String^>^GetErrors();
 	};
 }
