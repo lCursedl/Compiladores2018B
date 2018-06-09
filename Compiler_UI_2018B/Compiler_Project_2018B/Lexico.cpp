@@ -135,6 +135,8 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				if (*currChar == '&')
 				{
 					tokenBuffer.append(currChar, 1);
+					CToken * T = new CToken(tokenBuffer, TOKEN_TYPE::LOGICAL_OP, currentLine);
+					m_Tokens.push_back(T);
 					currChar++;
 				}
 				else
@@ -153,6 +155,8 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				if (*currChar == '|')
 				{
 					tokenBuffer.append(currChar, 1);
+					CToken * T = new CToken(tokenBuffer, TOKEN_TYPE::LOGICAL_OP, currentLine);
+					m_Tokens.push_back(T);
 					currChar++;
 				}
 				else

@@ -1,8 +1,8 @@
 ﻿  Lexico.cpp
 Lexico.cpp(32): warning C4101: 'dError': unreferenced local variable
 Lexico.cpp(33): warning C4101: 'lError': unreferenced local variable
-Lexico.cpp(458): warning C4018: '<': signed/unsigned mismatch
-Lexico.cpp(463): warning C4018: '<': signed/unsigned mismatch
+Lexico.cpp(462): warning C4018: '<': signed/unsigned mismatch
+Lexico.cpp(467): warning C4018: '<': signed/unsigned mismatch
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Debug\Compiler_Project_2018B.dll
   Compiler_Project_2018B.vcxproj -> C:\Users\Gustavo\Documents\Visual Studio 2015\Projects\Compiladores2018B\Compiler_UI_2018B\Debug\Compiler_Project_2018B.pdb (Partial PDB)
