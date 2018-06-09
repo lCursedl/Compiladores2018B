@@ -29,11 +29,15 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 	int currentLine = 1;
 	const char * currChar = src;
 	const char * currLine = src;
-	String^E;
+	String^dError;
+	String^lError;
 	std::string tokenBuffer;
-	bool used_point = false;
+	bool fHasNumber = false;
 	m_State = LEX_STATE::START;
 	ClearTokens();
+
+	std::string StringError("Literal constant not closed");
+
 	while (*currChar != '\0')
 	{
 		switch (m_State)
@@ -62,6 +66,7 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				tokenBuffer.clear();
 				tokenBuffer.append(currChar, 1);
 				m_State = LEX_STATE::PARSING_FLOAT;
+				fHasNumber = false;
 				currChar++;
 			}
 			//Checking string
@@ -200,8 +205,8 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 					}
 					else
 					{
-						T = new CToken(tokenBuffer, TOKEN_TYPE::ID, currentLine);
-					}
+						T = new CToken(tokenBuffer, TOKEN_TYPE::ID, currentLine);						
+					}	
 					m_Tokens.push_back(T);
 					break;
 				}
@@ -239,7 +244,10 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 			}
 			else if (*currChar == '.')
 			{
+				tokenBuffer.append(currChar, 1);
 				m_State = LEX_STATE::PARSING_FLOAT;
+				fHasNumber = false;
+				currChar++;
 			}
 			else
 			{
@@ -252,61 +260,59 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 		break;
 		case LEX_STATE::PARSING_FLOAT:
 		{
-			if (*currChar == '.')
+			if (isdigit(*currChar))
 			{
-				if (!used_point)
+				fHasNumber = true;
+				tokenBuffer.append(currChar, 1);
+				currChar++;
+			}
+			else if (*currChar == '.')
+			{
+				if (fHasNumber)
 				{
-					used_point = true;
-					tokenBuffer.append(currChar, 1);
-					currChar++;
+					fHasNumber = false;
+					CToken *T;
+					T = new CToken(tokenBuffer, TOKEN_TYPE::FLOAT, currentLine);
+					m_Tokens.push_back(T);
+					m_State = LEX_STATE::START;
 				}
 				else
 				{
-					//Call error module
-				}
-				
-			}
-			else if (isdigit(*currChar))
-			{
-				tokenBuffer.append(currChar, 1);
-				currChar++;
-				if (*currChar == '\0')
-				{
-					CToken *T;
-					T = new CToken(tokenBuffer, TOKEN_TYPE::FLOAT, currentLine);
-					m_Tokens.push_back(T);
-					break;
-				}
-				else if (*currChar == '.')
-				{
-					used_point = false;
-					CToken *T;
-					T = new CToken(tokenBuffer, TOKEN_TYPE::FLOAT, currentLine);
-					m_Tokens.push_back(T);
-					break;
+					//call error module
+					tokenBuffer.clear();
+					m_State = LEX_STATE::START;
 				}
 			}
 			else
 			{
-				CToken *T;
-				T = new CToken(tokenBuffer, TOKEN_TYPE::FLOAT, currentLine);
-				m_Tokens.push_back(T);
-				m_State = LEX_STATE::START;
+				if (fHasNumber)
+				{
+					CToken *T;
+					T = new CToken(tokenBuffer, TOKEN_TYPE::FLOAT, currentLine);
+					m_Tokens.push_back(T);
+					m_State = LEX_STATE::START;
+				}
+				else
+				{
+					tokenBuffer.clear();
+					m_State = LEX_STATE::START;
+					//call error module
+				}
+				
 			}
 		}
 		break;
 		case LEX_STATE::PARSING_STRING:
 		{
-			if (*currChar != '\0')
+			if (*currChar != '\r')
 			{
-				if (*currChar != '"')
+				tokenBuffer.append(currChar, 1);
+				currChar++;
+				if (*currChar == '"')
 				{
 					tokenBuffer.append(currChar, 1);
-					currChar++;
-				}
-				else
-				{
-					tokenBuffer.append(currChar, 1);
+					CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::STRING, currentLine);
+					m_Tokens.push_back(T);
 					currChar++;
 					m_State = LEX_STATE::START;
 				}
@@ -314,8 +320,12 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 			else
 			{
 				//Call error module for unfinished string
+				/*dError = gcnew String(StringError.c_str());
+				lError = gcnew String("");
+				m_Err->AddError(ERROR_PHASE::LEXICO, currentLine, dError, dError);*/
 				m_State = LEX_STATE::START;
-			}
+				tokenBuffer.clear();
+			}			
 		}
 		break;
 		case LEX_STATE::PARSING_EQUALS:
@@ -326,11 +336,13 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::RELATIONAL_OP, currentLine);
 				m_Tokens.push_back(T);
 				currChar++;
+				m_State = LEX_STATE::START;
 			}
 			else
 			{
 				CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::ASSIGN, currentLine);
 				m_Tokens.push_back(T);
+				m_State = LEX_STATE::START;
 			}
 		}
 		break;
@@ -342,11 +354,13 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::RELATIONAL_OP, currentLine);
 				m_Tokens.push_back(T);
 				currChar++;
+				m_State = LEX_STATE::START;
 			}
 			else
 			{
 				CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::LOGICAL_OP, currentLine);
 				m_Tokens.push_back(T);
+				m_State = LEX_STATE::START;
 			}
 		}
 		break;
@@ -365,6 +379,7 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				{
 					CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::ARITHMETIC_OP, currentLine);
 					m_Tokens.push_back(T);
+					m_State = LEX_STATE::START;
 				}
 			}
 			else
@@ -372,6 +387,7 @@ bool Compiler_Project_2018B::CLexico::ParseCode(const char * src)
 				CToken* T = new CToken(tokenBuffer, TOKEN_TYPE::ARITHMETIC_OP, currentLine);
 				m_Tokens.push_back(T);
 				currChar++;
+				m_State = LEX_STATE::START;
 			}
 		}
 		break;
@@ -447,9 +463,7 @@ cli::array<String^>^ Compiler_Project_2018B::CLexico::GetToken()
 	for (int i = 0; i < m_Tokens.size(); i++)
 	{
 		S = gcnew String(m_Tokens[i]->GetLex().c_str());
-		S = (String^)System::Runtime::InteropServices::Marshal::PtrToStringAnsi(static_cast<IntPtr>(const_cast<char*>(m_Tokens[i]->GetLex().c_str())));
 		m_TokenString->SetValue(String::Format("{0}\t{1}", S, m_Tokens[i]->getTokenType().ToString()), i);
 	}
-
 	return m_TokenString;
 }

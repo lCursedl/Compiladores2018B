@@ -84,6 +84,7 @@
             this.UserInput.Location = new System.Drawing.Point(12, 27);
             this.UserInput.Multiline = true;
             this.UserInput.Name = "UserInput";
+            this.UserInput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.UserInput.Size = new System.Drawing.Size(808, 258);
             this.UserInput.TabIndex = 1;
             // 

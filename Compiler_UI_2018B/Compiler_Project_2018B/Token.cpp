@@ -3,6 +3,9 @@
 
 Compiler_Project_2018B::CToken::CToken(std::string lex, TOKEN_TYPE t, int LineN)
 {
+	m_Lexema = lex;
+	m_Type = t;
+	LineNum = LineN;
 }
 
 std::string Compiler_Project_2018B::CToken::GetLex()
